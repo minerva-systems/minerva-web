@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
   const MinervaLogo = () => (
     <div className="footer-logo">
-      <img src="logo-transparent.png" alt="Minerva Systems" className="logo-icon" />
+      <img src={`${process.env.PUBLIC_URL}/logo-transparent.png`} alt="Minerva Systems" className="logo-icon" />
       <span className="footer-logo-text">MINERVA SYSTEMS</span>
     </div>
   );

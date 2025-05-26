@@ -17,7 +17,7 @@ A modern, responsive React website built for Minerva Systems. Built with modular
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/minerva-web.git
+git clone https://github.com/minerva-systems/minerva-web.git
 cd minerva-web
 
 # Install dependencies
@@ -111,7 +111,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
--   **Live Site:** [minerva-systems.io](https://minerva-systems.io)
+-   **Live Site:** [minerva-systems.io](https://minerva-systems.github.io/minerva-web)
 -   **Repository:** [GitHub](https://github.com/minerva-systems/minerva-web)
 -   **Issues:** [GitHub Issues](https://github.com/minerva-systems/minerva-web/issues)
 

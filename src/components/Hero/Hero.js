@@ -4,7 +4,7 @@ import './Hero.css';
 
 const Hero = () => {
   const handleBetaClick = () => {
-    window.open('APP_RUNNER_URL', '_blank');
+    window.open('https://2cty3cvymp.us-west-2.awsapprunner.com', '_blank');
   };
 
   const handleConsultingClick = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-logo">
-            <img src="logo-transparent.png" alt="Minerva Systems" className="hero-logo-placeholder" />
+            <img src={`${process.env.PUBLIC_URL}/logo-transparent.png`} alt="Minerva Systems" className="hero-logo-placeholder" />
           </div>
           
           <h1 className="hero-title">

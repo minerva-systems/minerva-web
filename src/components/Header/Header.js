@@ -16,7 +16,7 @@ const Header = () => {
 
   const MinervaLogo = () => (
     <div className="logo-container">
-      <img src="logo-transparent.png" alt="Minerva Systems" className="logo-icon" />
+      <img src={`${process.env.PUBLIC_URL}/logo-transparent.png`} alt="Minerva Systems" className="logo-icon" />
       <span className="logo-text">MINERVA</span>
     </div>
   );
