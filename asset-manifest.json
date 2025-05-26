@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/minerva-web/static/css/main.c0414bc3.css",
+    "main.js": "/minerva-web/static/js/main.b3546c5f.js",
+    "static/js/453.2ea5b7e0.chunk.js": "/minerva-web/static/js/453.2ea5b7e0.chunk.js",
+    "index.html": "/minerva-web/index.html",
+    "main.c0414bc3.css.map": "/minerva-web/static/css/main.c0414bc3.css.map",
+    "main.b3546c5f.js.map": "/minerva-web/static/js/main.b3546c5f.js.map",
+    "453.2ea5b7e0.chunk.js.map": "/minerva-web/static/js/453.2ea5b7e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0414bc3.css",
+    "static/js/main.b3546c5f.js"
+  ]
+}
