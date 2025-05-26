@@ -1,0 +1,135 @@
+.services {
+  padding: 5rem 0;
+  background: rgba(30, 41, 59, 0.5);
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #fbbf24;
+}
+
+.services-subtitle {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  max-width: 768px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.service-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(251, 191, 36, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fbbf24;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card:hover .service-title {
+  color: #f59e0b;
+}
+
+.service-description {
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.service-action {
+  background: none;
+  border: none;
+  color: #fbbf24;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+.service-action:hover {
+  color: #f59e0b;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .services-title {
+    font-size: 3.5rem;
+  }
+}
