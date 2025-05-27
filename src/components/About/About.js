@@ -8,8 +8,8 @@ const About = () => {
         <div className="about-content">
           <h2 className="about-title">Professional Excellence</h2>
           <p className="about-description">
-            Minerva Systems represents the perfect fusion of financial expertise and cutting-edge technology. 
-            We deliver intelligent, strategic solutions that drive measurable business growth.
+            Minerva Systems represents the perfect fusion of business expertise and cutting-edge technology. 
+            We deliver intelligent, strategic solutions that drive measurable growth.
           </p>
           <p className="about-summary">
             Our approach combines deep analytical insight with practical execution, ensuring every solution is both 

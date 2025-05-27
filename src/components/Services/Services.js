@@ -4,14 +4,14 @@ import './Services.css';
 const Services = () => {
   const services = [
     {
-      icon: '🚀',
-      title: 'Intelligence Platform',
-      description: 'Our flagship financial intelligence platform powered by advanced analytics and machine learning.',
+      icon: '💰',
+      title: 'Personal Finance Platform',
+      description: 'Our personal finance platform that uses AI to optimize your expenses and provides detailed charts to visualize your spending patterns.',
       action: 'Try Beta →',
-      onClick: () => window.open('APP_RUNNER_URL', '_blank')
+      onClick: () => window.open('https://2cty3cvymp.us-west-2.awsapprunner.com/', '_blank')
     },
     {
-      icon: '⚡',
+      icon: '🚀',
       title: 'Strategic Consulting',
       description: 'Expert Software architecture and technology strategy consulting to scale your business.',
       action: 'Learn More →',
@@ -20,7 +20,7 @@ const Services = () => {
     {
       icon: '💼',
       title: 'Custom Solutions',
-      description: 'Bespoke financial tools and enterprise software solutions built with precision.',
+      description: 'Bespoke tools and enterprise software solutions built with precision.',
       action: 'Get Quote →',
       onClick: () => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })
     }
@@ -32,7 +32,7 @@ const Services = () => {
         <div className="services-header">
           <h2 className="services-title">Our Expertise</h2>
           <p className="services-subtitle">
-            Combining cutting-edge technology with financial expertise to deliver exceptional results
+            Combining cutting-edge technology with industry expertise to deliver exceptional results
           </p>
         </div>
 

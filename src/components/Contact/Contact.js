@@ -127,7 +127,7 @@ const Contact = () => {
                 disabled={isSubmitting}
               >
                 <option value="">Select a service</option>
-                <option value="Intelligence Platform Beta">Intelligence Platform Beta</option>
+                <option value="Finance Platform Beta">Finance Platform Beta</option>
                 <option value="Strategic Consulting">Strategic Consulting</option>
                 <option value="Custom Solutions">Custom Solutions</option>
                 <option value="Other">Other</option>

@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="footer-container">
         <MinervaLogo />
         <p className="footer-text">
-          &copy; 2025 Minerva Systems
+          &copy; 2025 Minerva Systems. All rights reserved.
         </p>
       </div>
     </footer>
