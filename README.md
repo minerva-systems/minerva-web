@@ -5,7 +5,6 @@
 
 A modern, responsive React website built for Minerva Systems. Built with modular components and simple CSS architecture.
 
-
 ## 📦 Installation
 
 ### Prerequisites
