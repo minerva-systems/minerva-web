@@ -4,9 +4,9 @@ import './Services.css';
 const Services = () => {
   const services = [
     {
-      icon: '💰',
-      title: 'Personal Finance Platform',
-      description: 'Our personal finance platform that uses AI to optimize your expenses and provides detailed charts to visualize your spending patterns.',
+      icon: '📊',
+      title: 'EDGAR Trading Recommendations',
+      description: 'AI-powered trading insights from SEC filings',
       action: 'Try Beta →',
       onClick: () => window.open('https://2cty3cvymp.us-west-2.awsapprunner.com/', '_blank')
     },

@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="hero-buttons">
             <button onClick={handleBetaClick} className="btn-primary">
               <ExternalLink size={20} />
-              Access Beta Platform
+              Access EDGAR Beta Platform
             </button>
             <button onClick={handleConsultingClick} className="btn-secondary">
               Explore Consulting

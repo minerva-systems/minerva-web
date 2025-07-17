@@ -1,6 +1,7 @@
 {
   "name": "minerva-web",
   "version": "0.1.0",
+  "description": "minerva-web landing page",
   "private": true,
   "homepage": "https://minerva-systems.github.io/minerva-web",
   "dependencies": {
