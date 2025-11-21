@@ -1,0 +1,31 @@
+---
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ThreeTiers from '../components/ThreeTiers.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import WhyChooseUs from '../components/WhyChooseUs.astro';
+import Footer from '../components/Footer.astro';
+import { getAssetPath } from '../utils/assetPath';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Real Support for Real Businesses - Websites, consulting, and custom solutions for small businesses & creators." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href={getAssetPath('favicon.ico')} />
+    <meta name="generator" content={Astro.generator} />
+    <title>Minerva Systems - Real Support for Real Businesses</title>
+  </head>
+  <body>
+    <Header />
+    <Hero />
+    <ThreeTiers />
+    <HowItWorks />
+    <WhyChooseUs />
+    <Footer />
+  </body>
+</html>
+

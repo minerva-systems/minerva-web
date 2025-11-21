@@ -1,0 +1,216 @@
+---
+import { getAssetPath } from '../utils/assetPath';
+const logoPath = getAssetPath('logo-transparent.png');
+---
+
+<header class="header" id="header">
+  <nav class="nav-container">
+    <div class="nav-content">
+      <div class="logo-container">
+        <img src={logoPath} alt="Minerva Systems" class="logo-icon" />
+        <span class="logo-text">MINERVA</span>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <div class="nav-links desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#tiers">Services</a>
+        <a href="#how-it-works">How It Works</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg id="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav-content">
+        <a href="#home">Home</a>
+        <a href="#tiers">Services</a>
+        <a href="#how-it-works">How It Works</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  let isMenuOpen = false;
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      mobileNav?.classList.add('open');
+      menuIcon?.setAttribute('style', 'display: none;');
+      closeIcon?.setAttribute('style', 'display: block;');
+    } else {
+      mobileNav?.classList.remove('open');
+      menuIcon?.setAttribute('style', 'display: block;');
+      closeIcon?.setAttribute('style', 'display: none;');
+    }
+  });
+
+  // Close mobile menu when clicking a link
+  const mobileLinks = mobileNav?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      isMenuOpen = false;
+      mobileNav?.classList.remove('open');
+      menuIcon?.setAttribute('style', 'display: block;');
+      closeIcon?.setAttribute('style', 'display: none;');
+    });
+  });
+
+  // Header scroll effect
+  const header = document.getElementById('header');
+  let scrolled = false;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50 && !scrolled) {
+      header?.classList.add('scrolled');
+      scrolled = true;
+    } else if (window.scrollY <= 50 && scrolled) {
+      header?.classList.remove('scrolled');
+      scrolled = false;
+    }
+  });
+</script>
+
+<style>
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .header.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    background: #fbbf24;
+    border-radius: 8px;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fbbf24;
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+
+  .nav-links a:hover {
+    color: #fbbf24;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #d1d5db;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+  }
+
+  .mobile-menu-btn:hover {
+    color: #fbbf24;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid #334155;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-nav.open {
+    max-height: 300px;
+  }
+
+  .mobile-nav-content {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mobile-nav-content a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+
+  .mobile-nav-content a:hover {
+    color: #fbbf24;
+  }
+
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+    
+    .mobile-menu-btn {
+      display: block;
+    }
+  }
+</style>
+

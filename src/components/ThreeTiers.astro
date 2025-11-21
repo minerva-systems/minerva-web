@@ -1,0 +1,236 @@
+---
+const tiers = [
+  {
+    title: "One-Time Website Build",
+    description: "Perfect for businesses that need a professional website without ongoing commitments.",
+    features: [
+      "Custom website design & development",
+      "Mobile-responsive layout",
+      "SEO optimization",
+      "Fast loading times",
+      "Basic content management",
+      "1 month of post-launch support"
+    ],
+    cta: "Learn More",
+    ctaLink: "#tiers"
+  },
+  {
+    title: "Website + Hosting + Monthly Consulting",
+    description: "Complete solution with ongoing support and strategic guidance for growing businesses.",
+    features: [
+      "Everything in Tier 1",
+      "Managed hosting & maintenance",
+      "Monthly strategy consultations",
+      "Regular content updates",
+      "Performance monitoring",
+      "Priority support & quick response"
+    ],
+    cta: "Learn More",
+    ctaLink: "#tiers"
+  },
+  {
+    title: "POW — Project-Oriented Work",
+    description: "Flexible, custom projects tailored to your specific business needs and goals.",
+    features: [
+      "Custom project scoping",
+      "Flexible engagement model",
+      "Dedicated project management",
+      "Technical expertise on-demand",
+      "Scalable solutions",
+      "Ongoing partnership opportunities"
+    ],
+    cta: "Learn More",
+    ctaLink: "#tiers"
+  }
+];
+---
+
+<section id="tiers" class="tiers">
+  <div class="tiers-container">
+    <div class="tiers-header">
+      <h2 class="tiers-title">Choose Your Service Tier</h2>
+      <p class="tiers-subtitle">
+        Flexible solutions designed to grow with your business
+      </p>
+    </div>
+
+    <div class="tiers-grid">
+      {tiers.map((tier) => (
+        <div class="tier-card">
+          <h3 class="tier-title">{tier.title}</h3>
+          <p class="tier-description">{tier.description}</p>
+          <ul class="tier-features">
+            {tier.features.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+          <a href={tier.ctaLink} class="tier-cta">
+            {tier.cta} →
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .tiers {
+    padding: 5rem 0;
+    background: rgba(30, 41, 59, 0.5);
+  }
+
+  .tiers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .tiers-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .tiers-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #fbbf24;
+  }
+
+  .tiers-subtitle {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    max-width: 768px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .tiers-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .tier-card {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tier-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .tier-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(251, 191, 36, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .tier-card:hover::before {
+    opacity: 1;
+  }
+
+  .tier-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fbbf24;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tier-card:hover .tier-title {
+    color: #f59e0b;
+  }
+
+  .tier-description {
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    font-size: 1rem;
+  }
+
+  .tier-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tier-features li {
+    color: #d1d5db;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .tier-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #fbbf24;
+    font-weight: bold;
+  }
+
+  .tier-cta {
+    background: none;
+    border: none;
+    color: #fbbf24;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  .tier-cta:hover {
+    color: #f59e0b;
+  }
+
+  @media (min-width: 768px) {
+    .tiers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tiers-title {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .tiers-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .tiers-title {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+

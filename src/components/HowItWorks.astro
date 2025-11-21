@@ -1,0 +1,160 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Discovery",
+    description: "We start by understanding your business goals, target audience, and specific needs through a comprehensive consultation."
+  },
+  {
+    number: "02",
+    title: "Build",
+    description: "Our team creates your solution with precision, keeping you informed every step of the way with clear communication."
+  },
+  {
+    number: "03",
+    title: "Support",
+    description: "We provide ongoing support and optimization to ensure your solution continues to serve your business effectively."
+  }
+];
+---
+
+<section id="how-it-works" class="how-it-works">
+  <div class="how-it-works-container">
+    <div class="how-it-works-header">
+      <h2 class="how-it-works-title">How It Works</h2>
+      <p class="how-it-works-subtitle">
+        A simple, transparent process from start to finish
+      </p>
+    </div>
+
+    <div class="steps-grid">
+      {steps.map((step) => (
+        <div class="step-card">
+          <div class="step-number">{step.number}</div>
+          <h3 class="step-title">{step.title}</h3>
+          <p class="step-description">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-it-works {
+    padding: 5rem 0;
+    background: #0f172a;
+  }
+
+  .how-it-works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .how-it-works-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .how-it-works-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #fbbf24;
+  }
+
+  .how-it-works-subtitle {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    max-width: 768px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .steps-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .step-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .step-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(251, 191, 36, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .step-card:hover::before {
+    opacity: 1;
+  }
+
+  .step-number {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #fbbf24, #eab308, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    opacity: 0.3;
+  }
+
+  .step-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fbbf24;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-description {
+    color: #d1d5db;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 768px) {
+    .steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .how-it-works-title {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .how-it-works-title {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
